@@ -10,8 +10,6 @@ print(sess.run([node1,node2]))
 node3 = tf.add(node1,node2)
 print("node3:",node3)
 print("sess.run(node3):",sess.run(node3))
-
-
 a = tf.placeholder(tf.float32)
 b = tf.placeholder(tf.float32)
 adder_node = a + b
@@ -44,4 +42,5 @@ train = optimizer.minimize(loss)
 sess.run(init)
 for i in range(1000):
     sess.run(train,{x:[1,2,3,4],y:[0,-1,-2,-3]})
+
 print(sess.run([W,b]))
